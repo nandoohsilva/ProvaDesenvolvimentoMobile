@@ -39,7 +39,7 @@ namespace Contas.LibClasses
 
         public bool Sacar(double Valor)
         {
-            if (Valor > this.Saldo)
+            if (Valor > (this.Saldo+this.LimiteConta))
                 return false;
 
             this.Saldo -= Valor;
